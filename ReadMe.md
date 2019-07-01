@@ -21,7 +21,7 @@ composer require dansmaculotte/mondialrelay-php
 
 ## Usage
 
-[Colissimo Documentation](https://www.mondialrelay.fr/media/108937/Solution-Web-Service-V5.6.pdf)
+[MondialRelay Documentation](https://www.mondialrelay.fr/media/108937/Solution-Web-Service-V5.6.pdf)
 
 #### Find pickup points
 
