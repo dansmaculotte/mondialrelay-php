@@ -10,7 +10,7 @@ This library aims to facilitate the usage of Mondial Relay Web Services
 
 ### Requirements
 
-- PHP 7.2
+- PHP 7.3
 - Soap Extension
 
 You can install the package via composer:
