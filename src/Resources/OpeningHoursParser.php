@@ -2,15 +2,16 @@
 
 namespace DansMaCulotte\MondialRelay\Resources;
 
+use Spatie\OpeningHours\OpeningHours;
 use stdClass;
 
-class BusinessHoursParser
+class OpeningHoursParser
 {
     /**
-     * Parse the SOAP result of a relay point and returns an array of BusinessHours
+     * Parse the SOAP result of a relay point and returns an array of OpeningHours
      *
      * @param stdClass $relayPoint
-     * @return array
+     * @return OpeningHours
      */
     public static function parse(stdClass $relayPoint)
     {
@@ -27,10 +28,12 @@ class BusinessHoursParser
         ];
 
         foreach ($days as $day => $dayFr) {
-            $businessHours[$day] =  BusinessHoursParser::_formatOpeningHoursDay($relayPoint->{'Horaires_' . $dayFr}->string);
+            $businessHours[$day] =  OpeningHoursParser::_formatOpeningHoursDay($relayPoint->{'Horaires_' . $dayFr}->string);
         }
 
-        return $businessHours;
+        $openingHours = OpeningHours::create($businessHours);
+
+        return $openingHours;
     }
 
 
@@ -42,11 +45,11 @@ class BusinessHoursParser
     {
         $validOpenings = [];
         if (!empty($hours[0]) && !empty($hours[1])) {
-            array_push($validOpenings, BusinessHoursParser::_formatRangeTime($hours[0], $hours[1]));
+            array_push($validOpenings, OpeningHoursParser::_formatRangeTime($hours[0], $hours[1]));
         }
 
         if (!empty($hours[2]) && !empty($hours[3])) {
-            array_push($validOpenings, BusinessHoursParser::_formatRangeTime($hours[2], $hours[3]));
+            array_push($validOpenings, OpeningHoursParser::_formatRangeTime($hours[2], $hours[3]));
         }
 
         return $validOpenings;
@@ -60,7 +63,7 @@ class BusinessHoursParser
      */
     private static function _formatRangeTime(string $startTime, string $endTime)
     {
-        return implode('-', [BusinessHoursParser::_formatTime($startTime), BusinessHoursParser::_formatTime($endTime)]);
+        return implode('-', [OpeningHoursParser::_formatTime($startTime), OpeningHoursParser::_formatTime($endTime)]);
     }
 
 

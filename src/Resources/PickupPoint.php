@@ -2,6 +2,7 @@
 
 namespace DansMaCulotte\MondialRelay\Resources;
 
+
 class PickupPoint
 {
     public $id;
@@ -53,6 +54,6 @@ class PickupPoint
             $this->$value = (isset($parameters->$key) ? $parameters->$key : null);
         }
 
-        $this->openings = BusinessHoursParser::parse($parameters);
+        $this->openings = OpeningHoursParser::parse($parameters);
     }
 }

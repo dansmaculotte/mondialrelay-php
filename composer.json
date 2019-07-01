@@ -17,7 +17,8 @@
     "require": {
         "php": "^7.3",
         "ext-soap": "^7.3",
-        "zendframework/zend-soap": "^2.8"
+        "zendframework/zend-soap": "^2.8",
+        "spatie/opening-hours": "^2.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.2"
