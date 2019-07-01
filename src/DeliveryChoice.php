@@ -41,7 +41,7 @@ class DeliveryChoice extends Client
     public function findPickupPoints(string $city,
                                      string $zipCode,
                                      string $country,
-                                     int $nbResults,
+                                     int $nbResults = null,
                                      string $code = null,
                                      string $latitude = null,
                                      string $longitude = null,

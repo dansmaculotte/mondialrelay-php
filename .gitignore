@@ -1,2 +1,3 @@
 /vendor
 tests/Credentials.php
+.phpunit.result.cache

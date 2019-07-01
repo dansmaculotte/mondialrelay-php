@@ -16,8 +16,8 @@ class DeliveryChoiceTest extends TestCase
             )
         );
 
-        $result = $delivery->findPickupPoints('Paris', '75001', 'FR', 4);
+        $result = $delivery->findPickupPoints('Paris', '75001', 'FR');
+        $this->assertEquals(10, sizeof($result));
 
-        print_r($result);
     }
 }

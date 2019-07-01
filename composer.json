@@ -1,5 +1,5 @@
 {
-    "name": "dansmaculotte/mondial-relay-php",
+    "name": "dansmaculotte/mondialrelay-php",
     "description": "PHP SDK for MondialRelay Web Services",
     "type": "library",
     "license": "MIT",
