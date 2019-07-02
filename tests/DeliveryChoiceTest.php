@@ -1,13 +1,14 @@
 <?php
 
 use DansMaCulotte\MondialRelay\DeliveryChoice;
+use DansMaCulotte\MondialRelay\Resources\PickupPoint;
 use PHPUnit\Framework\TestCase;
 
 require_once 'Credentials.php';
 
 class DeliveryChoiceTest extends TestCase
 {
-    public function testDeliveryChoice()
+    public function test_find_pick_up_points()
     {
         $delivery = new DeliveryChoice(
             array(
@@ -18,7 +19,9 @@ class DeliveryChoiceTest extends TestCase
 
         $result = $delivery->findPickupPoints('Paris', '75001', 'FR');
 
-        $this->assertEquals(10, sizeof($result));
+        foreach ($result as $point) {
+            $this->assertInstanceOf(PickupPoint::class, $point);
+        }
 
     }
 }
