@@ -1,4 +1,4 @@
-# Colissimo Web Sercices PHP SDK
+# Mondial Relay Web Sercices PHP SDK
 
 This library aims to facilitate the usage of Mondial Relay Web Services
 
