@@ -42,13 +42,27 @@ class Client
 
         $this->_credentials = array(
             'Enseigne' =>  $credentials['site_id'],
-            'site_key' =>  $credentials['site_key'],
+            'Key' =>  $credentials['site_key'],
         );
+
 
         $this->_soapClient = new SoapClient(
             $url,
             array_merge($this->_soapOptions, $options)
         );
+    }
+
+
+    private function getSecurityKey(array $params)
+    {
+        $security = $this->_credentials['Enseigne'];
+        foreach ($params as $param) {
+            $security.= $param;
+        }
+        $security.= $this->_credentials['Key'];
+
+        print_r($security);
+        return strtoupper(md5($security));
     }
 
 
@@ -63,15 +77,17 @@ class Client
      */
     public function soapExec(string $method, array $params)
     {
+
+        $params['Security'] = $this->getSecurityKey($params);
+
         $result = $this->_soapClient->$method(
             array_merge($this->_credentials, $params)
         );
 
-        if ($result->WSI4_PointRelais_RechercheResult->STAT != 0)
+
+        if ($result->{$method . 'Result'}->STAT != 0)
         {
-            throw new Exception(
-                'Invalid'
-            );
+            throw new Exception('Invalid, code: ' . $result->{$method . 'Result'}->STAT);
         }
 
         return $result;

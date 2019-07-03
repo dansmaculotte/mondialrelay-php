@@ -4,7 +4,7 @@ This library aims to facilitate the usage of Mondial Relay Web Services
 
 ## Services
 
-- [Delivery Choice](https://www.mondialrelay.fr/media/108937/Solution-Web-Service-V5.6.pdf)
+- [Delivery Choice](http://api.mondialrelay.com/Web_Services.asmx?op=WSI4_PointRelais_Recherche)
 
 ## Installation
 
