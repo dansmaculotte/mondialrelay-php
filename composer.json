@@ -26,9 +26,15 @@
         "spatie/opening-hours": "^2.6"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
         "phpunit/phpunit": "^8.2"
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "@php vendor/bin/phpunit",
+        "coverage": "@php vendor/bin/phpunit --coverage-html coverage",
+        "format": "@php vendor/bin/php-cs-fixer fix --config .php_cs.php"
+    },
+    "config": {
+        "sort-packages": true
     }
 }

@@ -7,7 +7,6 @@ use Zend\Soap\Client as SoapClient;
 
 class Client
 {
-
     private $_soapClient;
     private $_soapOptions;
     private $_credentials;
@@ -36,14 +35,14 @@ class Client
             );
         }
 
-        $this->_soapOptions = array(
+        $this->_soapOptions = [
             'soap_version' => SOAP_1_1,
-        );
+        ];
 
-        $this->_credentials = array(
+        $this->_credentials = [
             'Enseigne' =>  $credentials['site_id'],
             'Key' =>  $credentials['site_key'],
-        );
+        ];
 
 
         $this->_soapClient = new SoapClient(
@@ -77,7 +76,6 @@ class Client
      */
     public function soapExec(string $method, array $params)
     {
-
         $params['Security'] = $this->getSecurityKey($params);
 
         $result = $this->_soapClient->$method(
@@ -85,8 +83,7 @@ class Client
         );
 
 
-        if ($result->{$method . 'Result'}->STAT != 0)
-        {
+        if ($result->{$method . 'Result'}->STAT != 0) {
             throw new Exception('Invalid, code: ' . $result->{$method . 'Result'}->STAT);
         }
 

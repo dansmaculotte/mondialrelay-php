@@ -73,6 +73,6 @@ class OpeningHoursParser
      */
     private static function _formatTime($hours)
     {
-        return implode(':', str_split($hours,  2));
+        return implode(':', str_split($hours, 2));
     }
 }

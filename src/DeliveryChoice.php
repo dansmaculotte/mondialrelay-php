@@ -1,6 +1,7 @@
 <?php
 
 namespace DansMaCulotte\MondialRelay;
+
 use DansMaCulotte\MondialRelay\Resources\PickupPoint;
 
 /**
@@ -17,7 +18,7 @@ class DeliveryChoice extends Client
      * @param array $options       Additional parameters to submit to the web services
      * @throws \Exception
      */
-    public function __construct(array $credentials, array $options = array())
+    public function __construct(array $credentials, array $options = [])
     {
         parent::__construct($credentials, self::SERVICE_URL, $options);
     }
@@ -38,18 +39,19 @@ class DeliveryChoice extends Client
      * @return array
      * @throws \Exception
      */
-    public function findPickupPoints(string $city,
-                                     string $zipCode,
-                                     string $country,
-                                     int $nbResults = null,
-                                     string $code = null,
-                                     string $latitude = null,
-                                     string $longitude = null,
-                                     string $weight = null,
-                                     string $collectType = null,
-                                     string $sendingDelay = null,
-                                     int $searchRadius = null)
-    {
+    public function findPickupPoints(
+        string $city,
+        string $zipCode,
+        string $country,
+        int $nbResults = null,
+        string $code = null,
+        string $latitude = null,
+        string $longitude = null,
+        string $weight = null,
+        string $collectType = null,
+        string $sendingDelay = null,
+        int $searchRadius = null
+    ) {
         $options = [
                 'Ville' => $city,
                 'CP' => $zipCode,
