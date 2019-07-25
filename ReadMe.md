@@ -1,6 +1,12 @@
-# Mondial Relay Web Sercices PHP SDK
+# Mondial Relay Web Services PHP SDK
 
-This library aims to facilitate the usage of Mondial Relay Web Services
+[![Latest Version](https://img.shields.io/packagist/v/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://packagist.org/packages/dansmaculotte/mondialrelay-php)
+[![Total Downloads](https://img.shields.io/packagist/dt/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://packagist.org/packages/dansmaculotte/mondialrelay-php)
+[![Build Status](https://img.shields.io/travis/DansMaCulotte/mondialrelay-php/master.svg?style=flat-square)](https://travis-ci.org/dansmaculotte/mondialrelay-php)
+[![Quality Score](https://img.shields.io/scrutinizer/g/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/dansmaculotte/mondialrelay-php)
+[![Code Coverage](https://img.shields.io/coveralls/github/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://coveralls.io/github/dansmaculotte/mondialrelay-php)
+
+> This library aims to facilitate the usage of Mondial Relay Web Services
 
 ## Services
 
@@ -10,7 +16,7 @@ This library aims to facilitate the usage of Mondial Relay Web Services
 
 ### Requirements
 
-- PHP 7.3
+- PHP 7.2
 - Soap Extension
 
 You can install the package via composer:
