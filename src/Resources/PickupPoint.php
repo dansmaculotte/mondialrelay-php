@@ -2,27 +2,68 @@
 
 namespace DansMaCulotte\MondialRelay\Resources;
 
+use DansMaCulotte\MondialRelay\Helpers\OpeningHoursParser;
+
 class PickupPoint
 {
+    /** @var string */
     public $id;
+
+    /** @var string */
     public $name;
+
+    /** @var string */
     public $nameAdditional;
+
+    /** @var string */
     public $address;
+
+    /** @var string */
     public $addressOptional;
+
+    /** @var string */
     public $postalCode;
+
+    /** @var string */
     public $city;
+
+    /** @var string */
     public $countryCode;
+
+    /** @var string */
     public $latitude;
+
+    /** @var string */
     public $longitude;
+
+    /** @var string */
     public $activityTypeCode;
+
+    /** @var string */
     public $distance;
+
+    /** @var string */
     public $locationHint;
+
+    /** @var string */
     public $locationHintOptional;
+
+    /** @var \Spatie\OpeningHours\OpeningHours */
     public $openings;
+
+    /** @var string */
     public $holidays;
+
+    /** @var string */
     public $startHolidays;
+
+    /** @var string */
     public $endHolidays;
+
+    /** @var string */
     public $mapUrl;
+
+    /** @var string */
     public $photoUrl;
 
 

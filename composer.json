@@ -12,11 +12,20 @@
         {
             "name": "Martin Potel",
             "email": "martin@dansmaculotte.fr"
+        },
+        {
+            "name": "Gaël Reyrol",
+            "email": "gael@dansmaculotte.fr"
         }
     ],
     "autoload": {
         "psr-4": {
             "DansMaCulotte\\MondialRelay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DansMaCulotte\\MondialRelay\\Tests\\": "tests/"
         }
     },
     "require": {
