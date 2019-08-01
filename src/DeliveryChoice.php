@@ -2,14 +2,16 @@
 
 namespace DansMaCulotte\MondialRelay;
 
+use DansMaCulotte\MondialRelay\Exceptions\Exception;
 use DansMaCulotte\MondialRelay\Resources\PickupPoint;
 
 /**
  * Implementation of Delivery Choice Web Service
  * https://www.mondialrelay.fr/media/108937/Solution-Web-Service-V5.6.pdf
  */
-class DeliveryChoice extends Client
+class DeliveryChoice extends MondialRelay
 {
+    /** @var string */
     const SERVICE_URL = 'https://api.mondialrelay.com/Web_Services.asmx?WSDL';
 
     /**
@@ -70,6 +72,11 @@ class DeliveryChoice extends Client
             'WSI4_PointRelais_Recherche',
             $options
         );
+
+        $errorCode = $result->WSI4_PointRelais_RechercheResult->STAT;
+        if ($errorCode != 0) {
+            throw Exception::requestError($errorCode);
+        }
 
         $result = $result->WSI4_PointRelais_RechercheResult->PointsRelais->PointRelais_Details;
 

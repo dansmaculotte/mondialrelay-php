@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.mondialrelay.fr/webservice/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.mondialrelay.fr/webservice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www.mondialrelay.fr/webservice/">
+            <s:element name="WSI2_CreationExpedition">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ModeCol" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ModeLiv" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NDossier" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NClient" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Langage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Tel1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Tel2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Mail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Langage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Tel1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Tel2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Mail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Longueur" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NbColis" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CRT_Valeur" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CRT_Devise" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Exp_Valeur" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Exp_Devise" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="COL_Rel_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="COL_Rel" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="LIV_Rel_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="LIV_Rel" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TAvisage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TReprise" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Montage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TRDV" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Assurance" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Instructions" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_CreationExpeditionResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_CreationExpeditionResult" type="tns:ret_WSI2_CreationExpedition" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_CreationExpedition">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="ExpeditionNum" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="TRI_AgenceCode" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="TRI_Groupe" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="TRI_Navette" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="TRI_Agence" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="TRI_TourneeCode" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="TRI_LivraisonMode" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="CodesBarres" type="tns:ArrayOfString" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ret_">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="STAT" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfString">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI2_CreationEtiquette">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ModeCol" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ModeLiv" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NDossier" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NClient" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Langage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ad4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Tel1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Tel2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expe_Mail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Langage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad3" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ad4" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Tel1" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Tel2" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Dest_Mail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Longueur" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NbColis" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CRT_Valeur" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CRT_Devise" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Exp_Valeur" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Exp_Devise" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="COL_Rel_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="COL_Rel" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="LIV_Rel_Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="LIV_Rel" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TAvisage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TReprise" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Montage" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TRDV" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Assurance" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Instructions" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Texte" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_CreationEtiquetteResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_CreationEtiquetteResult" type="tns:ret_WSI2_CreationEtiquette" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_CreationEtiquette">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="ExpeditionNum" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="URL_Etiquette" type="s:string" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="WSI3_GetEtiquettes">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expeditions" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Langue" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI3_GetEtiquettesResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI3_GetEtiquettesResult" type="tns:ret_WSI3_GetEtiquettes" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI3_GetEtiquettes">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_WSI2_GetEtiquettes">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="URL_PDF_10x15" type="s:string" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ret_WSI2_GetEtiquettes">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="URL_PDF_A4" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="URL_PDF_A5" type="s:string" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="WSI2_GetEtiquettes">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expeditions" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Langue" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_GetEtiquettesResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_GetEtiquettesResult" type="tns:ret_WSI2_GetEtiquettes" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_RechercheCP">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NbResult" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_RechercheCPResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_RechercheCPResult" type="tns:ret_WSI2_RechercheCP" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_RechercheCP">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="Liste" type="tns:ArrayOfCommune" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ArrayOfCommune">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="Commune" nillable="true" type="tns:Commune" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="Commune">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI3_PointRelais_Recherche">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NumPointRelais" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DelaiEnvoi" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RayonRecherche" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TypeActivite" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NACE" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI3_PointRelais_RechercheResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI3_PointRelais_RechercheResult" type="tns:ret_WSI3_PointRelais_Recherche" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI3_PointRelais_Recherche">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="PointsRelais" type="tns:ArrayOfPointRelais_Details" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ArrayOfPointRelais_Details">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="PointRelais_Details" nillable="true" type="tns:PointRelais_Details" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="PointRelais_Details">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="STAT" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr1" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr2" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr3" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr4" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Localisation1" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Localisation2" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="TypeActivite" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="NACE" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Information" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Lundi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Mardi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Mercredi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Jeudi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Vendredi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Samedi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Dimanche" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Informations_Dispo" type="tns:ArrayOfPeriode" />
+                    <s:element minOccurs="0" maxOccurs="1" name="URL_Photo" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="URL_Plan" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Distance" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfPeriode">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="Periode" nillable="true" type="tns:Periode" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="Periode">
+                <s:sequence>
+                    <s:element minOccurs="1" maxOccurs="1" name="Debut" nillable="true" type="s:dateTime" />
+                    <s:element minOccurs="1" maxOccurs="1" name="Fin" nillable="true" type="s:dateTime" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI4_PointRelais_Recherche">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NumPointRelais" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DelaiEnvoi" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RayonRecherche" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TypeActivite" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NACE" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" name="NombreResultats" nillable="true" type="s:int" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI4_PointRelais_RechercheResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI4_PointRelais_RechercheResult" type="tns:ret_WSI3_PointRelais_Recherche" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_AdressePointRelais">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_AdressePointRelaisResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_AdressePointRelaisResult" type="tns:ret_WSI2_AdressePointRelais" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_AdressePointRelais">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr1" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr2" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr3" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr4" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="WSI2_DetailPointRelais">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_DetailPointRelaisResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_DetailPointRelaisResult" type="tns:ret_WSI2_DetailPointRelais" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_DetailPointRelais">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr1" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr2" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr3" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="LgAdr4" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Localisation1" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Localisation2" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Lundi" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Mardi" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Mercredi" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Jeudi" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Vendredi" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Samedi" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Horaires_Dimanche" type="tns:ArrayOfString" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Information" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="URL_Photo" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="URL_Plan" type="s:string" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:element name="WSI2_RecherchePointRelais">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_RecherchePointRelaisResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_RecherchePointRelaisResult" type="tns:ret_WSI2_RecherchePointRelais" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_RecherchePointRelais">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="PR01" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR02" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR03" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR04" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR05" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR06" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR07" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR08" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR09" type="tns:ret_WSI2_sub_PointRelais" />
+                            <s:element minOccurs="0" maxOccurs="1" name="PR10" type="tns:ret_WSI2_sub_PointRelais" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ret_WSI2_sub_PointRelais">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr1" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr2" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr3" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr4" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI2_RecherchePointRelaisAvancee">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DelaiEnvoi" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RayonRecherche" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="TypeActivite" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="NACE" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_RecherchePointRelaisAvanceeResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_RecherchePointRelaisAvanceeResult" type="tns:ret_WSI2_RecherchePointRelaisAvancee" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_RecherchePointRelaisAvancee">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="ListePR" type="tns:ArrayOfRet_WSI2_sub_PointRelaisAvancee" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ArrayOfRet_WSI2_sub_PointRelaisAvancee">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="ret_WSI2_sub_PointRelaisAvancee" nillable="true" type="tns:ret_WSI2_sub_PointRelaisAvancee" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ret_WSI2_sub_PointRelaisAvancee">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr1" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr2" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr3" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr4" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="TypeActivite" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="NACE" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Distance" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI2_RecherchePointRelaisHoraires">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Taille" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Poids" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_RecherchePointRelaisHorairesResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_RecherchePointRelaisHorairesResult" type="tns:ret_WSI2_RecherchePointRelaisHoraires" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_RecherchePointRelaisHoraires">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="ListePR" type="tns:ArrayOfRet_WSI2_sub_PointRelaisHoraires" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ArrayOfRet_WSI2_sub_PointRelaisHoraires">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="ret_WSI2_sub_PointRelaisHoraires" nillable="true" type="tns:ret_WSI2_sub_PointRelaisHoraires" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ret_WSI2_sub_PointRelaisHoraires">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr1" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr2" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr3" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="LgAdr4" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="CP" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Pays" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Lundi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Mardi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Mercredi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Jeudi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Vendredi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Samedi" type="tns:ArrayOfString" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Horaires_Dimanche" type="tns:ArrayOfString" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI2_TracingColisDetaille">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Expedition" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Langue" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_TracingColisDetailleResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_TracingColisDetailleResult" type="tns:ret_WSI2_TracingColisDetaille" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ret_WSI2_TracingColisDetaille">
+                <s:complexContent mixed="false">
+                    <s:extension base="tns:ret_">
+                        <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="Libelle01" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Relais_Libelle" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Relais_Num" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Libelle02" type="s:string" />
+                            <s:element minOccurs="0" maxOccurs="1" name="Tracing" type="tns:ArrayOfRet_WSI2_sub_TracingColisDetaille" />
+                        </s:sequence>
+                    </s:extension>
+                </s:complexContent>
+            </s:complexType>
+            <s:complexType name="ArrayOfRet_WSI2_sub_TracingColisDetaille">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="ret_WSI2_sub_TracingColisDetaille" nillable="true" type="tns:ret_WSI2_sub_TracingColisDetaille" />
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ret_WSI2_sub_TracingColisDetaille">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="1" name="Libelle" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Heure" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Emplacement" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Relais_Num" type="s:string" />
+                    <s:element minOccurs="0" maxOccurs="1" name="Relais_Pays" type="s:string" />
+                </s:sequence>
+            </s:complexType>
+            <s:element name="WSI2_STAT_Label">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="STAT_ID" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Langue" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_STAT_LabelResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_STAT_LabelResult" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_STAT_Labels">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Enseigne" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Langue" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Security" type="s:string" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="WSI2_STAT_LabelsResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="WSI2_STAT_LabelsResult" type="tns:ArrayOfArrayOfString" />
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ArrayOfArrayOfString">
+                <s:sequence>
+                    <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+                </s:sequence>
+            </s:complexType>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="WSI2_CreationExpeditionSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_CreationExpedition" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_CreationExpeditionSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_CreationExpeditionResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_CreationEtiquetteSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_CreationEtiquette" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_CreationEtiquetteSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_CreationEtiquetteResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI3_GetEtiquettesSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI3_GetEtiquettes" />
+    </wsdl:message>
+    <wsdl:message name="WSI3_GetEtiquettesSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI3_GetEtiquettesResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_GetEtiquettesSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_GetEtiquettes" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_GetEtiquettesSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_GetEtiquettesResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RechercheCPSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_RechercheCP" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RechercheCPSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_RechercheCPResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI3_PointRelais_RechercheSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI3_PointRelais_Recherche" />
+    </wsdl:message>
+    <wsdl:message name="WSI3_PointRelais_RechercheSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI3_PointRelais_RechercheResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI4_PointRelais_RechercheSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI4_PointRelais_Recherche" />
+    </wsdl:message>
+    <wsdl:message name="WSI4_PointRelais_RechercheSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI4_PointRelais_RechercheResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_AdressePointRelaisSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_AdressePointRelais" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_AdressePointRelaisSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_AdressePointRelaisResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_DetailPointRelaisSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_DetailPointRelais" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_DetailPointRelaisSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_DetailPointRelaisResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RecherchePointRelaisSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_RecherchePointRelais" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RecherchePointRelaisSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_RecherchePointRelaisResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RecherchePointRelaisAvanceeSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_RecherchePointRelaisAvancee" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RecherchePointRelaisAvanceeSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_RecherchePointRelaisAvanceeResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RecherchePointRelaisHorairesSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_RecherchePointRelaisHoraires" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_RecherchePointRelaisHorairesSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_RecherchePointRelaisHorairesResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_TracingColisDetailleSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_TracingColisDetaille" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_TracingColisDetailleSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_TracingColisDetailleResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_STAT_LabelSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_STAT_Label" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_STAT_LabelSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_STAT_LabelResponse" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_STAT_LabelsSoapIn">
+        <wsdl:part name="parameters" element="tns:WSI2_STAT_Labels" />
+    </wsdl:message>
+    <wsdl:message name="WSI2_STAT_LabelsSoapOut">
+        <wsdl:part name="parameters" element="tns:WSI2_STAT_LabelsResponse" />
+    </wsdl:message>
+    <wsdl:portType name="Web_ServicesSoap">
+        <wsdl:operation name="WSI2_CreationExpedition">
+            <wsdl:input message="tns:WSI2_CreationExpeditionSoapIn" />
+            <wsdl:output message="tns:WSI2_CreationExpeditionSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_CreationEtiquette">
+            <wsdl:input message="tns:WSI2_CreationEtiquetteSoapIn" />
+            <wsdl:output message="tns:WSI2_CreationEtiquetteSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI3_GetEtiquettes">
+            <wsdl:input message="tns:WSI3_GetEtiquettesSoapIn" />
+            <wsdl:output message="tns:WSI3_GetEtiquettesSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_GetEtiquettes">
+            <wsdl:input message="tns:WSI2_GetEtiquettesSoapIn" />
+            <wsdl:output message="tns:WSI2_GetEtiquettesSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RechercheCP">
+            <wsdl:input message="tns:WSI2_RechercheCPSoapIn" />
+            <wsdl:output message="tns:WSI2_RechercheCPSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI3_PointRelais_Recherche">
+            <wsdl:input message="tns:WSI3_PointRelais_RechercheSoapIn" />
+            <wsdl:output message="tns:WSI3_PointRelais_RechercheSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI4_PointRelais_Recherche">
+            <wsdl:input message="tns:WSI4_PointRelais_RechercheSoapIn" />
+            <wsdl:output message="tns:WSI4_PointRelais_RechercheSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_AdressePointRelais">
+            <wsdl:input message="tns:WSI2_AdressePointRelaisSoapIn" />
+            <wsdl:output message="tns:WSI2_AdressePointRelaisSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_DetailPointRelais">
+            <wsdl:input message="tns:WSI2_DetailPointRelaisSoapIn" />
+            <wsdl:output message="tns:WSI2_DetailPointRelaisSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelais">
+            <wsdl:input message="tns:WSI2_RecherchePointRelaisSoapIn" />
+            <wsdl:output message="tns:WSI2_RecherchePointRelaisSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelaisAvancee">
+            <wsdl:input message="tns:WSI2_RecherchePointRelaisAvanceeSoapIn" />
+            <wsdl:output message="tns:WSI2_RecherchePointRelaisAvanceeSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelaisHoraires">
+            <wsdl:input message="tns:WSI2_RecherchePointRelaisHorairesSoapIn" />
+            <wsdl:output message="tns:WSI2_RecherchePointRelaisHorairesSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_TracingColisDetaille">
+            <wsdl:input message="tns:WSI2_TracingColisDetailleSoapIn" />
+            <wsdl:output message="tns:WSI2_TracingColisDetailleSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_STAT_Label">
+            <wsdl:input message="tns:WSI2_STAT_LabelSoapIn" />
+            <wsdl:output message="tns:WSI2_STAT_LabelSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_STAT_Labels">
+            <wsdl:input message="tns:WSI2_STAT_LabelsSoapIn" />
+            <wsdl:output message="tns:WSI2_STAT_LabelsSoapOut" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="Web_ServicesSoap" type="tns:Web_ServicesSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="WSI2_CreationExpedition">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_CreationExpedition" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_CreationEtiquette">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_CreationEtiquette" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI3_GetEtiquettes">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI3_GetEtiquettes" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_GetEtiquettes">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_GetEtiquettes" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RechercheCP">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RechercheCP" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI3_PointRelais_Recherche">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI3_PointRelais_Recherche" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI4_PointRelais_Recherche">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI4_PointRelais_Recherche" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_AdressePointRelais">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_AdressePointRelais" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_DetailPointRelais">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_DetailPointRelais" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelais">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RecherchePointRelais" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelaisAvancee">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RecherchePointRelaisAvancee" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelaisHoraires">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RecherchePointRelaisHoraires" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_TracingColisDetaille">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_TracingColisDetaille" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_STAT_Label">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_STAT_Label" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_STAT_Labels">
+            <soap:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_STAT_Labels" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="Web_ServicesSoap12" type="tns:Web_ServicesSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="WSI2_CreationExpedition">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_CreationExpedition" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_CreationEtiquette">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_CreationEtiquette" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI3_GetEtiquettes">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI3_GetEtiquettes" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_GetEtiquettes">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_GetEtiquettes" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RechercheCP">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RechercheCP" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI3_PointRelais_Recherche">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI3_PointRelais_Recherche" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI4_PointRelais_Recherche">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI4_PointRelais_Recherche" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_AdressePointRelais">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_AdressePointRelais" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_DetailPointRelais">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_DetailPointRelais" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelais">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RecherchePointRelais" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelaisAvancee">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RecherchePointRelaisAvancee" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_RecherchePointRelaisHoraires">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_RecherchePointRelaisHoraires" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_TracingColisDetaille">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_TracingColisDetaille" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_STAT_Label">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_STAT_Label" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="WSI2_STAT_Labels">
+            <soap12:operation soapAction="http://www.mondialrelay.fr/webservice/WSI2_STAT_Labels" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Web_Services">
+        <wsdl:port name="Web_ServicesSoap" binding="tns:Web_ServicesSoap">
+            <soap:address location="http://api.mondialrelay.com/Web_Services.asmx" />
+        </wsdl:port>
+        <wsdl:port name="Web_ServicesSoap12" binding="tns:Web_ServicesSoap12">
+            <soap12:address location="http://api.mondialrelay.com/Web_Services.asmx" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -10,7 +10,7 @@
 
 ## Services
 
-- [Delivery Choice](http://api.mondialrelay.com/Web_Services.asmx?op=WSI4_PointRelais_Recherche)
+- [Delivery Choice](https://api.mondialrelay.com/Web_Services.asmx?op=WSI4_PointRelais_Recherche)
 
 ## Installation
 
@@ -35,10 +35,10 @@ composer require dansmaculotte/mondialrelay-php
 use DansMaCulotte\MondialRelay\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
-    array(
+    [
         'site_id' => MONDIAL_RELAY_SITE_ID,
         'site_key' => MONDIAL_RELAY_SITE_KEY,
-    )
+    ]
 );
 
 $result = $delivery->findPickupPoints('Paris', '75001', 'FR', 4);
