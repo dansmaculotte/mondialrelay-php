@@ -41,7 +41,24 @@ $delivery = new DeliveryChoice(
     ]
 );
 
-$result = $delivery->findPickupPoints('Paris', '75001', 'FR', 4);
+$result = $delivery->findPickupPoints('FR', '75001', 'FR');
+
+print_r($result);
+```
+
+#### Find pickup points by code
+
+```php
+use DansMaCulotte\MondialRelay\DeliveryChoice;
+
+$delivery = new DeliveryChoice(
+    [
+        'site_id' => MONDIAL_RELAY_SITE_ID,
+        'site_key' => MONDIAL_RELAY_SITE_KEY,
+    ]
+);
+
+$result = $delivery->findPickupPointsByCode('FR', '062049');
 
 print_r($result);
 ```

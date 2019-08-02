@@ -27,45 +27,48 @@ class DeliveryChoice extends MondialRelay
 
 
     /**
-     * @param string $city                City name
-     * @param string $zipCode             Zip code
-     * @param string $country             ISO 3166 country code
-     * @param int $nbResults              Number of results
-     * @param string|null $code           Pickup point code
-     * @param string|null $latitude       Latitude
-     * @param string|null $longitude      Longitude
-     * @param string|null $weight         Weight in grams
-     * @param string|null $collectType    Delivery or collect type
-     * @param string|null $sendingDelay   Delay before sending
-     * @param int|null $searchRadius      Radius from the origin point
+     * @param string $country ISO 3166 country code
+     * @param string|null $city City name
+     * @param string|null $zipCode Zip code
+     * @param string|null $latitude Latitude
+     * @param string|null $longitude Longitude
+     * @param string|null $code Pickup point code
+     * @param string|null $weight Weight in grams
+     * @param string|null $collectType Delivery or collect type
+     * @param string|null $sendingDelay Delay before sending
+     * @param int|null $searchRadius Radius from the origin point
+     * @param string|null $activityType
+     * @param int $nbResults Number of results
      * @return array
-     * @throws \Exception
+     * @throws Exception
      */
     public function findPickupPoints(
-        string $city,
-        string $zipCode,
         string $country,
-        int $nbResults = null,
-        string $code = null,
+        string $city = null,
+        string $zipCode = null,
         string $latitude = null,
         string $longitude = null,
+        string $code = null,
         string $weight = null,
         string $collectType = null,
         string $sendingDelay = null,
-        int $searchRadius = null
+        int $searchRadius = 0,
+        string $activityType = null,
+        int $nbResults = 10
     ) {
         $options = [
-                'Ville' => $city,
-                'CP' => $zipCode,
-                'Pays' => $country,
-                'NombreResultats' => $nbResults,
-                'NumPointRelais' => $code,
-                'Latitude' => $latitude,
-                'Longitude' => $longitude,
-                'Action' => $collectType,
-                'Poids' => $weight,
-                'DalayEnvoie' => $sendingDelay,
-                'RayonRecherche' => $searchRadius,
+            'Pays' => $country,
+            'Ville' => $city,
+            'CP' => $zipCode,
+            'Latitude' => $latitude,
+            'Longitude' => $longitude,
+            'NumPointRelais' => $code,
+            'Poids' => $weight,
+            'Action' => $collectType,
+            'DelaiEnvoie' => $sendingDelay,
+            'RayonRecherche' => $searchRadius,
+            'TypeActivite' => $activityType,
+            'NombreResultats' => $nbResults,
         ];
 
         $result = $this->soapExec(
@@ -88,5 +91,18 @@ class DeliveryChoice extends MondialRelay
         );
 
         return $pickupPoints;
+    }
+
+    /**
+     * @param string $country
+     * @param string $code
+     * @return array
+     * @throws Exception
+     */
+    public function findPickupPointsByCode(string $country, string $code)
+    {
+        $points = $this->findPickupPoints($country, null, null, null, null, $code);
+
+        return $points;
     }
 }
