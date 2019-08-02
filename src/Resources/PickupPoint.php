@@ -126,15 +126,16 @@ class PickupPoint
             'monday' => $monday,
             'tuesday' => $tuesday,
             'wednesday' => $wednesday,
-            'jeudi' => $thursday,
-            'vendredi' => $friday,
-            'samedi' => $saturday,
-            'dimanche' => $sunday,
+            'thursday' => $thursday,
+            'friday' => $friday,
+            'saturday' => $saturday,
+            'sunday' => $sunday,
         ];
 
         foreach ($weekDays as $dayKey => $hours) {
             $day = [];
-            for ($i = 0; $i < count($hours); $i+=2) {
+            $hoursCount = count($hours);
+            for ($i = 0; $i < $hoursCount; $i+=2) {
                 if (!empty($hours[$i]) && !empty($hours[$i + 1])) {
                     array_push(
                         $day,
