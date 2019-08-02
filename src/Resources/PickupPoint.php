@@ -2,8 +2,6 @@
 
 namespace DansMaCulotte\MondialRelay\Resources;
 
-use DansMaCulotte\MondialRelay\Helpers\OpeningHoursParser;
-
 class PickupPoint
 {
     /** @var string */
@@ -48,7 +46,7 @@ class PickupPoint
     /** @var string */
     public $locationHintOptional;
 
-    /** @var \Spatie\OpeningHours\OpeningHours */
+    /** @var array */
     public $openings;
 
     /** @var string */
@@ -94,6 +92,65 @@ class PickupPoint
             $this->$value = (isset($parameters->$key) ? $parameters->$key : null);
         }
 
-        $this->openings = OpeningHoursParser::parse($parameters);
+        $this->openings = $this->parseOpenings(
+            $parameters->Horaires_Lundi->string,
+            $parameters->Horaires_Mardi->string,
+            $parameters->Horaires_Mercredi->string,
+            $parameters->Horaires_Jeudi->string,
+            $parameters->Horaires_Vendredi->string,
+            $parameters->Horaires_Samedi->string,
+            $parameters->Horaires_Dimanche->string
+        );
+    }
+
+    /**
+     * @param array $monday
+     * @param array $tuesday
+     * @param array $wednesday
+     * @param array $thursday
+     * @param array $friday
+     * @param array $saturday
+     * @param array $sunday
+     * @return array
+     */
+    private function parseOpenings(
+        array $monday,
+        array $tuesday,
+        array $wednesday,
+        array $thursday,
+        array $friday,
+        array $saturday,
+        array $sunday
+    ) {
+        $weekDays = [
+            'monday' => $monday,
+            'tuesday' => $tuesday,
+            'wednesday' => $wednesday,
+            'jeudi' => $thursday,
+            'vendredi' => $friday,
+            'samedi' => $saturday,
+            'dimanche' => $sunday,
+        ];
+
+        foreach ($weekDays as $dayKey => $hours) {
+            $day = [];
+            for ($i = 0; $i < count($hours); $i+=2) {
+                if (!empty($hours[$i]) && !empty($hours[$i + 1])) {
+                    array_push(
+                        $day,
+                        implode(
+                            '-',
+                            [
+                                implode(':', str_split($hours[$i], 2)),
+                                implode(':', str_split($hours[$i + 1], 2))
+                            ]
+                        )
+                    );
+                }
+            }
+            $weekDays[$dayKey] = $day;
+        }
+
+        return $weekDays;
     }
 }
