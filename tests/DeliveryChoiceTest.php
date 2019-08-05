@@ -104,6 +104,30 @@ class DeliveryChoiceTest extends TestCase
         $delivery->findPickupPoints('Paris', '75001', 'FR');
     }
 
+    public function testFindPickupPointsWithFlatResult()
+    {
+        $mockedPickupPointsResult = new \stdClass();
+        $mockedPickupPointsResult->STAT = 0;
+        $mockedPickupPointsResult->PointsRelais = new \stdClass();
+        $mockedPickupPointsResult->PointsRelais->PointRelais_Details = $this->pickupPointMock();
+
+        $mockedResult = new \stdClass();
+        $mockedResult->WSI4_PointRelais_RechercheResult = $mockedPickupPointsResult;
+
+        $this->mondialRelayWSDL
+            ->expects($this->any())
+            ->method('WSI4_PointRelais_Recherche')
+            ->willReturn($mockedResult);
+
+        $delivery = new DeliveryChoice($this->credentials);
+        $delivery->soapClient = $this->mondialRelayWSDL;
+
+        $result = $delivery->findPickupPoints('Paris', '75001', 'FR');
+        $this->assertCount(1, $result);
+        $this->assertContainsOnlyInstancesOf(PickupPoint::class, $result);
+    }
+
+
     public function testFindPickupPointsByCode()
     {
         $mockedPickupPoint = $this->pickupPointMock();

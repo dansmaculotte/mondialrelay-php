@@ -39,7 +39,7 @@ class DeliveryChoice extends MondialRelay
      * @param int|null $searchRadius Radius from the origin point
      * @param string|null $activityType
      * @param int $nbResults Number of results
-     * @return array
+     * @return PickupPoint[]
      * @throws Exception
      */
     public function findPickupPoints(
@@ -83,6 +83,12 @@ class DeliveryChoice extends MondialRelay
 
         $result = $result->WSI4_PointRelais_RechercheResult->PointsRelais->PointRelais_Details;
 
+        if (is_array($result) === false) {
+            return [
+                new PickupPoint($result)
+            ];
+        }
+
         $pickupPoints = array_map(
             function ($pickupPoint) {
                 return new PickupPoint($pickupPoint);
@@ -96,7 +102,7 @@ class DeliveryChoice extends MondialRelay
     /**
      * @param string $country
      * @param string $code
-     * @return array
+     * @return PickupPoint
      * @throws Exception
      */
     public function findPickupPointByCode(string $country, string $code)
