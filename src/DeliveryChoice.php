@@ -99,10 +99,14 @@ class DeliveryChoice extends MondialRelay
      * @return array
      * @throws Exception
      */
-    public function findPickupPointsByCode(string $country, string $code)
+    public function findPickupPointByCode(string $country, string $code)
     {
         $points = $this->findPickupPoints($country, null, null, null, null, $code);
 
-        return $points;
+        if (count($points) === 0) {
+            throw Exception::noPickupPoint($code);
+        }
+
+        return $points[0];
     }
 }

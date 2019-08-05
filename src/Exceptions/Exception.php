@@ -21,4 +21,9 @@ class Exception extends \Exception
     {
         return new self("Request returned error code: ${code}");
     }
+
+    public static function noPickupPoint($code)
+    {
+        return new self("No pickup point found with code: ${code}");
+    }
 }

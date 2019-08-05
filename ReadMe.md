@@ -58,7 +58,7 @@ $delivery = new DeliveryChoice(
     ]
 );
 
-$result = $delivery->findPickupPointsByCode('FR', '062049');
+$result = $delivery->findPickupPointByCode('FR', '062049');
 
 print_r($result);
 ```
