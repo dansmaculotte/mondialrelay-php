@@ -2,27 +2,19 @@
 
 namespace DansMaCulotte\MondialRelay\Exceptions;
 
-class Exception extends \Exception
+class Exception extends \RuntimeException
 {
-    /**
-     * @param $key
-     * @return Exception
-     */
-    public static function invalidCredentials($key)
+    public static function invalidCredentials(string $key): Exception
     {
         return new self("You must provide a ${key} to authenticate with MondialRelay Web Services");
     }
 
-    /**
-     * @param $code
-     * @return Exception
-     */
-    public static function requestError($code)
+    public static function requestError(string $code): Exception
     {
         return new self("Request returned error code: ${code}");
     }
 
-    public static function noPickupPoint($code)
+    public static function noPickupPoint(string $code): Exception
     {
         return new self("No pickup point found with code: ${code}");
     }

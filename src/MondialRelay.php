@@ -3,7 +3,7 @@
 namespace DansMaCulotte\MondialRelay;
 
 use DansMaCulotte\MondialRelay\Exceptions\Exception;
-use Zend\Soap\Client as SoapClient;
+use Laminas\Soap\Client as SoapClient;
 
 class MondialRelay
 {
@@ -29,12 +29,12 @@ class MondialRelay
      */
     public function __construct(array $credentials, string $url = null, array $options = [])
     {
-        if (isset($credentials['site_id']) == false) {
-            throw Exception::invalidCredentials("site id");
+        if (!isset($credentials['site_id'])) {
+            throw Exception::invalidCredentials('site id');
         }
 
-        if (isset($credentials['site_key']) == false) {
-            throw Exception::invalidCredentials("site key");
+        if (!isset($credentials['site_key'])) {
+            throw Exception::invalidCredentials('site key');
         }
 
         $this->credentials = [
@@ -50,7 +50,7 @@ class MondialRelay
     }
 
 
-    private function getSecurityKey(array $params)
+    private function getSecurityKey(array $params): string
     {
         $security = $this->credentials['Enseigne'];
         foreach ($params as $param) {
@@ -76,8 +76,6 @@ class MondialRelay
         $params['Security'] = $this->getSecurityKey($params);
         $params['Enseigne'] = $this->credentials['Enseigne'];
 
-        $result = $this->soapClient->$method($params);
-
-        return $result;
+        return $this->soapClient->$method($params);
     }
 }

@@ -15,7 +15,7 @@ class DeliveryChoiceTest extends TestCase
         parent::__construct($name, $data, $dataName);
 
         $this->mondialRelayWSDL = $this->getMockFromWsdl(
-            __DIR__.'/assets/mondialrelay.wsdl',
+            __DIR__ . '/fixtures/mondialrelay.wsdl',
             'WSI4_PointRelais_Recherche'
         );
     }

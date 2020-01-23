@@ -89,7 +89,7 @@ class PickupPoint
         ];
 
         foreach ($parametersMap as $key => $value) {
-            $this->$value = (isset($parameters->$key) ? $parameters->$key : null);
+            $this->$value = ($parameters->$key ?? null);
         }
 
         $this->openings = $this->parseOpenings(
@@ -137,15 +137,12 @@ class PickupPoint
             $hoursCount = count($hours);
             for ($i = 0; $i < $hoursCount; $i+=2) {
                 if (!empty($hours[$i]) && !empty($hours[$i + 1])) {
-                    array_push(
-                        $day,
-                        implode(
-                            '-',
-                            [
-                                implode(':', str_split($hours[$i], 2)),
-                                implode(':', str_split($hours[$i + 1], 2))
-                            ]
-                        )
+                    $day[] = implode(
+                        '-',
+                        [
+                            implode(':', str_split($hours[$i], 2)),
+                            implode(':', str_split($hours[$i + 1], 2))
+                        ]
                     );
                 }
             }
