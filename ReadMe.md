@@ -41,7 +41,7 @@ $delivery = new DeliveryChoice(
     ]
 );
 
-$result = $delivery->findPickupPoints('FR', '75001', 'FR');
+$result = $delivery->findPickupPoints('FR', 'Paris', '75001');
 
 print_r($result);
 ```
