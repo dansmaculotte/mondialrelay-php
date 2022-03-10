@@ -16,7 +16,7 @@
 
 ### Requirements
 
-- PHP 7.2
+- PHP 7.4
 - Soap Extension
 
 You can install the package via composer:
