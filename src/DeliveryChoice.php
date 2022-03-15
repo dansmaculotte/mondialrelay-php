@@ -77,7 +77,7 @@ class DeliveryChoice extends MondialRelay
         );
 
         $errorCode = $result->WSI4_PointRelais_RechercheResult->STAT;
-        if ($errorCode !== 0) {
+        if ($errorCode !== '0') {
             throw Exception::requestError($errorCode);
         }
 

@@ -3,3 +3,4 @@ tests/Credentials.php
 .phpunit.result.cache
 .php_cs.cache
 build
+.php-cs-fixer.cache
