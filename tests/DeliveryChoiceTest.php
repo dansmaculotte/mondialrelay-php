@@ -62,7 +62,7 @@ class DeliveryChoiceTest extends TestCase
         $mockedPickupPoint = $this->pickupPointMock();
 
         $mockedPickupPointsResult = new \stdClass();
-        $mockedPickupPointsResult->STAT = 0;
+        $mockedPickupPointsResult->STAT = '0';
         $mockedPickupPointsResult->PointsRelais = new \stdClass();
         $mockedPickupPointsResult->PointsRelais->PointRelais_Details = [
             $mockedPickupPoint,
@@ -84,10 +84,38 @@ class DeliveryChoiceTest extends TestCase
         $this->assertContainsOnlyInstancesOf(PickupPoint::class, $results);
     }
 
+    public function testFindPickupPointsByCoordinate()
+    {
+        $mockedPickupPoint = $this->pickupPointMock();
+
+        $mockedPickupPointsResult = new \stdClass();
+        $mockedPickupPointsResult->STAT = '0';
+        $mockedPickupPointsResult->PointsRelais = new \stdClass();
+        $mockedPickupPointsResult->PointsRelais->PointRelais_Details = [
+            $mockedPickupPoint,
+        ];
+
+        $mockedResult = new \stdClass();
+        $mockedResult->WSI4_PointRelais_RechercheResult = $mockedPickupPointsResult;
+
+        $this->mondialRelayWSDL
+            ->expects($this->any())
+            ->method('WSI4_PointRelais_Recherche')
+            ->willReturn($mockedResult);
+
+        $delivery = new DeliveryChoice($this->credentials);
+        $delivery->soapClient = $this->mondialRelayWSDL;
+
+        $results = $delivery->findPickupPoints('FR', null, null, '45.02209721486682', '5.657100677490235');
+
+        $this->assertContainsOnlyInstancesOf(PickupPoint::class, $results);
+    }
+
+
     public function testFindPickupPointsWithError()
     {
         $mockedPickupPointsResult = new \stdClass();
-        $mockedPickupPointsResult->STAT = 1;
+        $mockedPickupPointsResult->STAT = '1';
 
         $mockedResult = new \stdClass();
         $mockedResult->WSI4_PointRelais_RechercheResult = $mockedPickupPointsResult;
@@ -107,7 +135,7 @@ class DeliveryChoiceTest extends TestCase
     public function testFindPickupPointsWithFlatResult()
     {
         $mockedPickupPointsResult = new \stdClass();
-        $mockedPickupPointsResult->STAT = 0;
+        $mockedPickupPointsResult->STAT = '0';
         $mockedPickupPointsResult->PointsRelais = new \stdClass();
         $mockedPickupPointsResult->PointsRelais->PointRelais_Details = $this->pickupPointMock();
 
@@ -133,7 +161,7 @@ class DeliveryChoiceTest extends TestCase
         $mockedPickupPoint = $this->pickupPointMock();
 
         $mockedPickupPointsResult = new \stdClass();
-        $mockedPickupPointsResult->STAT = 0;
+        $mockedPickupPointsResult->STAT = '0';
         $mockedPickupPointsResult->PointsRelais = new \stdClass();
         $mockedPickupPointsResult->PointsRelais->PointRelais_Details = [
             $mockedPickupPoint,
@@ -158,7 +186,7 @@ class DeliveryChoiceTest extends TestCase
     public function testFindPickupPointsByCodeWithError()
     {
         $mockedPickupPointsResult = new \stdClass();
-        $mockedPickupPointsResult->STAT = 0;
+        $mockedPickupPointsResult->STAT = '0';
         $mockedPickupPointsResult->PointsRelais = new \stdClass();
         $mockedPickupPointsResult->PointsRelais->PointRelais_Details = [];
 
