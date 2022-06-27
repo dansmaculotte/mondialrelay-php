@@ -16,12 +16,16 @@ class CoordinateFormatter
             if (strlen($latlngData[0]) > 3) {
                 throw CoordinateFormatException::digitError();
             }
-            return self::checkResult(substr($latlngData[0], 0, 3) . '.' . substr($latlngData[1], 0, 7));
+            return self::checkResult(
+                substr($latlngData[0], 0, 3) . '.' . str_pad(substr($latlngData[1], 0, 7), 6, '0', STR_PAD_RIGHT)
+            );
         }
         if (strlen($latlngData[0]) > 2) {
             throw CoordinateFormatException::digitError();
         }
-        return self::checkResult(substr($latlngData[0], 0, 2) . '.' . substr($latlngData[1], 0, 7));
+        return self::checkResult(
+            substr($latlngData[0], 0, 2) . '.' .  str_pad(substr($latlngData[1], 0, 7), 6, '0', STR_PAD_RIGHT)
+        );
     }
 
     private static function checkResult(string $result): string

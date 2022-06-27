@@ -60,4 +60,18 @@ class CoordinateFormatterTest extends TestCase
         $this->expectExceptionMessage('Coordinates does not follow expected pattern');
         CoordinateFormatter::format('12');
     }
+
+    /** @test */
+    public function should_pad_with_0_if_necessary()
+    {
+        $val = '50.72242';
+        $this->assertEquals('50.722420', CoordinateFormatter::format($val));
+    }
+
+    /** @test */
+    public function should_pad_with_0_if_necessary_for_negatives()
+    {
+        $val = '-50.72242';
+        $this->assertEquals('-50.722420', CoordinateFormatter::format($val));
+    }
 }
